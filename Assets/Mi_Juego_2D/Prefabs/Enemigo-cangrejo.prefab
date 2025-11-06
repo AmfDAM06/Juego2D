@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 2890441773692454863}
   - component: {fileID: 3018430264991805613}
   - component: {fileID: 2044685093385731225}
+  - component: {fileID: 42058896609409882}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -287,3 +288,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6c4fe8556b46d4d83da746981524af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlipCangrejo
+--- !u!114 &42058896609409882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948401034965381766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d7279c3342cf74e8dc01e44d36bb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimacionCangrejo

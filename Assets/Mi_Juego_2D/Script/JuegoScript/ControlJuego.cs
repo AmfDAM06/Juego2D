@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using TMPro;
+
 
 public class ControlJuego : MonoBehaviour
 {
-
+    public Canvas canvas;
+    private HUD_Control hud;
     public int numVidas;
     public int puntuacion;
     public int tiempoNivel;
@@ -19,11 +22,12 @@ public class ControlJuego : MonoBehaviour
     void Start()
     {
         tiempoInicio = (int)Time.time;
+        tiempoNivel = 60;
         vulnerable = true;
         jugador = GameObject.FindGameObjectWithTag("Player").gameObject;
         player_idle = jugador.transform.Find("player-idle-1").gameObject;
         sprite = player_idle.GetComponent<SpriteRenderer>();
-        
+        hud = canvas.GetComponent<HUD_Control>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,16 @@ public class ControlJuego : MonoBehaviour
         {
             GanarJuego();
         }
+
+        //Actualizar tiempo empleado
+        tiempoEmpleado = (int)(Time.time - tiempoInicio);
+        Debug.Log("Tiempo Empleado " + tiempoEmpleado);
+        hud.setTiempoEmpleado(tiempoEmpleado);
+        //Comprobar si hemos consumido el tiempo del nivel
+        if (tiempoNivel - tiempoEmpleado < 0) FinJuego();
+
+        hud.setPuntuacion(puntuacion);
+        hud.setNumVidas(numVidas);
     }
 
     public void FinJuego()
