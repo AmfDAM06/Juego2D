@@ -28,6 +28,10 @@ public class ControlJuego : MonoBehaviour
         player_idle = jugador.transform.Find("player-idle-1").gameObject;
         sprite = player_idle.GetComponent<SpriteRenderer>();
         hud = canvas.GetComponent<HUD_Control>();
+
+        hud.setPuntuacion(puntuacion);
+        hud.setNumVidas(numVidas);
+        hud.setTiempoEmpleado(tiempoEmpleado);
     }
 
     // Update is called once per frame
@@ -57,6 +61,7 @@ public class ControlJuego : MonoBehaviour
     public void IncrementarPuntos(int cantidad)
     {
         puntuacion += cantidad;
+        hud.setPuntuacion(puntuacion);
     }
 
     public void QuitarVida()
