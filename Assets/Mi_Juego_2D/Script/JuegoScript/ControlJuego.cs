@@ -18,7 +18,8 @@ public class ControlJuego : MonoBehaviour
     private GameObject jugador;
     private GameObject player_idle;
     private SpriteRenderer sprite;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private DatosJuego datosJuego;
     void Start()
     {
         tiempoInicio = (int)Time.time;
@@ -28,13 +29,12 @@ public class ControlJuego : MonoBehaviour
         player_idle = jugador.transform.Find("player-idle-1").gameObject;
         sprite = player_idle.GetComponent<SpriteRenderer>();
         hud = canvas.GetComponent<HUD_Control>();
+        datosJuego = GameObject.Find("DatosJuego").GetComponent<DatosJuego>();
 
         hud.setPuntuacion(puntuacion);
         hud.setNumVidas(numVidas);
         hud.setTiempoEmpleado(tiempoEmpleado);
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(GameObject.FindGameObjectsWithTag("PowerUP").Length == 0)
@@ -55,7 +55,8 @@ public class ControlJuego : MonoBehaviour
 
     public void FinJuego()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        datosJuego.Ganado = false;
+        SceneManager.LoadScene("FinNivel");
     }
 
     public void IncrementarPuntos(int cantidad)
@@ -82,7 +83,9 @@ public class ControlJuego : MonoBehaviour
     {
         puntuacion += (numVidas * 100) +
             (tiempoNivel - tiempoEmpleado);
-        Debug.Log("You Win " + puntuacion);
+        datosJuego.Puntuacion = puntuacion;
+        datosJuego.Ganado = true;
+        SceneManager.LoadScene("FinNivel");
     }
 
     public void HacerVulnerable()
