@@ -163,3 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbb9edbdcaed6a4fb22b6e6d7cd50b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlPowerUp
+  recolectarSfx: {fileID: 8300000, guid: ea9919ded3dc1be448f34024cd2c430c, type: 3}

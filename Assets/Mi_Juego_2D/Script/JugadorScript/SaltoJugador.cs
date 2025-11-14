@@ -8,12 +8,17 @@ public class SaltoJugador : MonoBehaviour
     private bool entradaSalto;
     private GameObject jugador;
     private GameObject player_idle;
+
+    public AudioClip saltoSfx;
+    private AudioSource audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         jugador = transform.parent.gameObject;
         player_idle = jugador.transform.Find("player-idle-1").gameObject;
         fisica = player_idle.GetComponent<Rigidbody2D>();
+        audioSource = jugador.transform.Find("AudioSource").gameObject.GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -22,6 +27,7 @@ public class SaltoJugador : MonoBehaviour
         {
             fisica.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
             entradaSalto = false;
+            audioSource.PlayOneShot(saltoSfx);
         }
     }
 

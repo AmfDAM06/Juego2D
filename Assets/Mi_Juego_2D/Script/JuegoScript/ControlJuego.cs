@@ -20,10 +20,16 @@ public class ControlJuego : MonoBehaviour
     private SpriteRenderer sprite;
 
     private DatosJuego datosJuego;
+
+    public AudioClip saltoSfx;
+    public AudioClip vidaSfx;
+    public AudioClip recolectarSfx;
+    private AudioSource audioSource;
+
     void Start()
     {
         tiempoInicio = (int)Time.time;
-        tiempoNivel = 60;
+        tiempoNivel = 90;
         vulnerable = true;
         jugador = GameObject.FindGameObjectWithTag("Player").gameObject;
         player_idle = jugador.transform.Find("player-idle-1").gameObject;
@@ -34,6 +40,9 @@ public class ControlJuego : MonoBehaviour
         hud.setPuntuacion(puntuacion);
         hud.setNumVidas(numVidas);
         hud.setTiempoEmpleado(tiempoEmpleado);
+
+        audioSource = jugador.transform.Find
+            ("AudioSource").gameObject.GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -74,7 +83,7 @@ public class ControlJuego : MonoBehaviour
             if (numVidas == 0) FinJuego();
             Invoke("HacerVulnerable", 1f);
             sprite.color = Color.red;
-
+            audioSource.PlayOneShot(vidaSfx);
         }
 
     }

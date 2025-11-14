@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaltoJugador
   fuerzaSalto: 7
+  saltoSfx: {fileID: 8300000, guid: d7c392f76fd23fd4cb4a70ff0d14a05b, type: 3}
 --- !u!114 &7221906250457365061
 MonoBehaviour:
   m_ObjectHideFlags: 0
