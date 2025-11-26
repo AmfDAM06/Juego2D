@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 7852880210089327104}
   - component: {fileID: 5991428385118710543}
   - component: {fileID: 7221906250457365061}
+  - component: {fileID: 3866057062265530098}
+  - component: {fileID: 5855297710618783806}
+  - component: {fileID: 1645068453308568396}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -86,6 +89,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2126c86bcf646e4a8924589bb629a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContolAnimacionJugador
+--- !u!114 &3866057062265530098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364123113439748381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ccede4c2110246a93edc3fa80a754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bala
+  velocidad: 10
+  dao: 1
+  tiempoDeVida: 2
+--- !u!114 &5855297710618783806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364123113439748381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c84658c37b9eeb40ac45cf7ab68e960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisparoJugador
+  puntoDeDisparo: {fileID: 0}
+  prefabBala: {fileID: 0}
+  disparoPotenciado: 0
+--- !u!114 &1645068453308568396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364123113439748381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8ee08947a26144f8e500b59ea3f7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoderesJugador
 --- !u!1 &2866294491551500900
 GameObject:
   m_ObjectHideFlags: 0
