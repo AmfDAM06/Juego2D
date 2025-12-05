@@ -237,8 +237,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7584084680759143756}
-  - component: {fileID: 4928891947754946915}
-  - component: {fileID: 6573229386471276650}
   - component: {fileID: 2079082613341471998}
   m_Layer: 0
   m_Name: Script
@@ -262,30 +260,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3670178597062591458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4928891947754946915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792746568141942716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6c4fe8556b46d4d83da746981524af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FlipCangrejo
---- !u!114 &6573229386471276650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792746568141942716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01d7279c3342cf74e8dc01e44d36bb56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimacionCangrejo
 --- !u!114 &2079082613341471998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlEnemigoPersigue
   velocidad: 2
-  posicionDestino: {x: 0, y: 0, z: 0}
-  posicionEnemigo: {x: 0, y: 0, z: 0}
-  posicionJugador: {x: 0, y: 0, z: 0}
   minimoX: -5
   maximoX: 4
+  distanciaVision: 5

@@ -53,7 +53,6 @@ public class ControlJuego : MonoBehaviour
 
         //Actualizar tiempo empleado
         tiempoEmpleado = (int)(Time.time - tiempoInicio);
-        Debug.Log("Tiempo Empleado " + tiempoEmpleado);
         hud.setTiempoEmpleado(tiempoEmpleado);
         //Comprobar si hemos consumido el tiempo del nivel
         if (tiempoNivel - tiempoEmpleado < 0) FinJuego();
